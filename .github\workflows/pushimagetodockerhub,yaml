@@ -26,4 +26,4 @@ jobs:
         with:
           context: nodetask/
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/node-hello:latest
+          tags:  mohammadimran0186/task1:latest
