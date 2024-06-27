@@ -26,4 +26,4 @@ COPY --from=builder /app /app
 EXPOSE 3000
 
 # Running the service
-CMD ["node", "index.json"]
+CMD ["node", "index.js"]
