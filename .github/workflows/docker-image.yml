@@ -24,6 +24,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: nodetask/
+          context: .
           push: true
           tags:  mohammadimran0186/task1:latest
