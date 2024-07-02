@@ -13,8 +13,8 @@ RUN npm install
 # Copying the rest of the application files
 COPY . .
 
-# Stage 2: Production
-FROM node:alpine
+# Stage 2: Production for ARM64
+FROM --platform=linux/arm64 node:alpine
 
 # Setting the working directory to /app
 WORKDIR /app
@@ -27,4 +27,3 @@ EXPOSE 3000
 
 # Running the service
 CMD ["node", "index.js"]
-
