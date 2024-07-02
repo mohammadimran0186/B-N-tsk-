@@ -27,3 +27,4 @@ EXPOSE 3000
 
 # Running the service
 CMD ["node", "index.js"]
+
