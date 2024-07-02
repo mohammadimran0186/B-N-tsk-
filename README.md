@@ -97,4 +97,4 @@ Ensure all necessary environment variables and configurations are set up as desc
 
 This repository contains everything you need to Dockerize, deploy, and manage a Node.js "Hello World" application on Kubernetes using Helm and ArgoCD. Follow the instructions carefully to ensure a smooth deployment.
 
-For any issues or queries, please open an issue in this repository.
+For any issues or queries, please open an issue in this repository
