@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: 'docker.io/mohammadimran0186/task1'
+  repository: docker.io/mohammadimran0186/task1
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "latest-amd64"
   containerPort: 3000  
 
     #imagePullSecrets: []
