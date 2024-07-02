@@ -8,7 +8,7 @@ image:
   repository: docker.io/mohammadimran0186/task1
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest-amd64"
+  tag: "latest-arm64"
   containerPort: 3000  
 
     #imagePullSecrets: []
