@@ -1,0 +1,30 @@
+buildPack: nodejs
+pipelineConfig:
+  pipelines:
+    release:
+      pipeline:
+        agent:
+          image: node:14
+        stages:
+        - name: build
+          steps:
+          - name: npm install
+            command: npm install
+          - name: npm build
+            command: npm run build
+        - name: test
+          steps:
+          - name: npm test
+            command: npm test
+        - name: push
+          steps:
+          - name: build docker image
+            command: |
+              docker build -t mohammadimran0186/node-app:$VERSION .
+              docker tag mohammadimran0186/node-app:$VERSION mohammadimran0186/node-app:latest
+              docker push mohammadimran0186/node-app:$VERSION
+              docker push mohammadimran0186/node-app:latest
+        # - name: promote
+        #   steps:
+        #   - name: jx promote
+        #     command: jx promote --app your-nodejs-app --version $VERSION --env production
